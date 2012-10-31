@@ -12,6 +12,8 @@ class Recaptcha
     {
         $this->CI =& get_instance();
 
+        $this->CI->load->config( 'recaptcha' );
+
         $this->private_key = $this->CI->config->item( 'recaptcha_private_key' );
         $this->public_key = $this->CI->config->item( 'recaptcha_public_key' );
     }
